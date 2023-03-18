@@ -1,14 +1,15 @@
-import math
-def dist_euclidiana(a, b):
-    soma = 0
+def dist_manhattan(a, b):
+    maximo = 0
     
     for i in range(len(a)):
-        sub = a[i] - b[i]
-        soma += math.pow(sub, 2)
-    
-    return math.sqrt(soma)
+        sub = abs(A[i] - B[i])
+        res = sub
+        if(maximo <= res):
+            maximo  = res  
+    return maximo
 
-A = [10,1,3,12]
-B = [4,5,4,2]
 
-print(dist_euclidiana(A, B))
+A = [1, 3, 4, 5, 10]
+B = [2, 11, 8, 9, 15]
+
+print(dist_manhattan(A, B))
